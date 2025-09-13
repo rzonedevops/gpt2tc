@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpt2tc"
+version = "0.1.0"
+description = "Text completion and compression using GPT-2"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "AGPL-3.0"}
+authors = [
+    {name = "rzonedevops"}
+]
+keywords = ["gpt2", "text-completion", "compression", "nlp", "ai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "torch>=1.9.0",
+    "transformers>=4.21.0",
+    "numpy>=1.21.0",
+    "click>=8.0.0",
+    "tqdm>=4.62.0",
+]
+
+[project.scripts]
+gpt2tc = "gpt2tc.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/rzonedevops/gpt2tc"
+Repository = "https://github.com/rzonedevops/gpt2tc"
